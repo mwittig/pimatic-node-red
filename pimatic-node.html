@@ -1,3 +1,4 @@
+
 <script type="text/javascript">
     RED.nodes.registerType('allvariables in',{
         category: 'pimatic',
@@ -60,6 +61,7 @@
         defaults: {
 			device: {value:"",required:true},
 			action: {value:"",required:true},
+            addpay: {value:true},
 			parameter: {value:"",required:false}
         },
         inputs:1,
@@ -91,7 +93,13 @@
     </div>
 	
     <div class="form-row">
-        <label for="node-input-action"><i class="fa fa-bookmark-o"></i> Parameter</label>
+        <label for="node-input-parameter"><i class="fa fa-bookmark-o"></i> Parameter</label>
+        <input type="checkbox" id="node-input-addpay" style="display: inline-block; width: auto; vertical-align: top;">
+        &nbsp;msg.payload
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-parameter"></label>
         <input type="text" id="node-input-parameter" placeholder="Parameter">
     </div>
 </script>
